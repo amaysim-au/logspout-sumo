@@ -112,7 +112,7 @@ type HTTPAdapter struct {
 
 // NewHTTPAdapter creates an HTTPAdapter
 func NewHTTPAdapter(route *router.Route) (router.LogAdapter, error) {
-	endpointUrl := fmt.Sprintf("https://collectors.sumologic.com/receiver/v1/http/%s", route.Address)
+	endpointUrl := fmt.Sprintf("https://collectors.au.sumologic.com/receiver/v1/http/%s", route.Address)
 	debug("http: url:", endpointUrl)
 	transport := &http.Transport{}
 	transport.Dial = dial
